@@ -6,8 +6,6 @@ Backend: PHP
 Database: MySQL
 Server: WAMP/XAMPP
 Setup Guide
-# LIVE DEMO:
-"https://poonam-0207.github.io/ProjectFac/"
 
 1. Install Requirements
 Download & install WAMP or XAMPP.
