@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Advisor Management System</title>
+    <link rel="stylesheet" href="fac.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <img src="college-logo.png" alt="College Logo" class="logo">
+            <h1>Basaveshwara Engineering College,Bagalkote.</h1>
+            <h2>Information Science and Engineering</h2>
+        </div>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#student-management">About</a></li>
+                <li><a href="#faculty-management">Notice</a></li>
+                <li><a href="#about-system">View Students</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to the Faculty Advisor Information Management System</h2>
+            <div class="department-image">
+                <img src="department-image.jpg" alt="Department of Information Science">
+            </div>
+            <p>
+            </p>
+        </section>
+
+        <!-- HOD Section -->
+        <section id="hod-introduction">
+            <h2>Head of Department</h2>
+            <div class="hod-container">
+                <img src="hod.jpg" alt="HOD Image" class="hod-image">
+                <div class="hod-details">
+                    <h3>Dr. S.P. Bangarashetti</h3>
+                    <p>
+                        Welcome to the Department of Information Science and Engineering. </p?
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Management Section -->
+        <section id="faculty-management">
+            <h2>Faculty List</h2>
+            <div class="faculty-row">
+                <!-- Faculty Member 1 -->
+                <div class="faculty-card">
+                    <img src="faculty1.jpg" alt="Faculty 1">
+                    <h3>Sri.P.K.Deshapande</h3>
+                    <p>Assistant Professor</p>
+                </div>
+                <!-- Faculty Member 2 -->
+                <div class="faculty-card">
+                    <img src="faculty2.jpg" alt="Faculty 2">
+                    <h3>Smt. D.I.Kalappanavar</h3>
+                    <p>Assistant Professor</p>
+                </div>
+                <!-- Faculty Member 3 -->
+                <div class="faculty-card">
+                    <img src="faculty3.jpg" alt="Faculty 3">
+                    <h3>Sri.G.B.Shettar</h3>
+                    <p>Assistant Professor</p>
+                </div>
+                <!-- Faculty Member 4 -->
+                <div class="faculty-card">
+                    <img src="faculty4.jpg" alt="Faculty 4">
+                    <h3>Prof.P.V.Kulkarni</h3>
+                    <p>Assistant Professor</p>
+                </div>
+				<div class="faculty-card">
+                    <img src="faculty5.jpg" alt="Faculty 4">
+                    <h3>Miss.C.R. Shivanagi</h3>
+                    <p>Assistant Professor</p>
+                </div>
+				<div class="faculty-card">
+                    <img src="faculty6.jpg" alt="Faculty 4">
+                    <h3>Smt.Sheetal Pattanashetti</h3>
+                    <p>Assistant Professor</p>
+                </div>
+				<div class="faculty-card">
+                    <img src="faculty7.jpg" alt="Faculty 4">
+                    <h3>Smt.Roopa Math</h3>
+                    <p>Assistant Professor</p>
+                </div>
+				<div class="faculty-card">
+                    <img src="faculty8.jpg" alt="Faculty 4">
+                    <h3>Miss.G.M.Patil</h3>
+                    <p>Assistant Professor</p>
+                </div>
+				<div class="faculty-card">
+                    <img src="faculty9.jpg" alt="Faculty 4">
+                    <h3>Sri.S.N.Kugali</h3>
+                    <p>Assistant Professor</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;Department of Information Science and Engineering, Basaveshwara Engineering College,Bagalkote.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('.menu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight Active Menu Tab on Scroll
+        const sections = document.querySelectorAll('section');
+        const menuLinks = document.querySelectorAll('.menu a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 50;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
