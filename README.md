@@ -5,8 +5,8 @@ Frontend: HTML, CSS, JavaScript
 Backend: PHP
 Database: MySQL
 Server: WAMP/XAMPP
-Setup Guide
 
+Setup Guide
 1. Install Requirements
 Download & install WAMP or XAMPP.
 Start Apache and MySQL.
